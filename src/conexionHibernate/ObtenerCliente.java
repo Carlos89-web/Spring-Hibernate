@@ -4,8 +4,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-//--- VIDEO 57, 58 ---
-
 public class ObtenerCliente {
 
 	public static void main(String[] args) {
@@ -29,13 +27,13 @@ public class ObtenerCliente {
 			
 			System.out.println(detallesDeCliente.getElCliente());
 			
-			// Video 58: Eliminación en cascada
+			// EliminaciÃ³n en cascada
 			
 			miSession.delete(detallesDeCliente);
 
 			miSession.getTransaction().commit();
 
-		} // Video 58: movemos el cerrado de sesión al finally para evitr la fuga de memoria
+		} // Movemos el cerrado de sesiÃ³n al finally para evitar la fuga de memoria
 
 		catch (Exception e) {
 
