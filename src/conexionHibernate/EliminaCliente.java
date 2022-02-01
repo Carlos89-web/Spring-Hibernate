@@ -1,7 +1,5 @@
 package conexionHibernate;
 
-// --- VIDEO 56, 57, 58 ---
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -22,7 +20,7 @@ public class EliminaCliente {
 
 			miSession.beginTransaction();
 
-			// VIDEO 56: Creamos una instancia. Indicamos la clase del objeto que quiero
+			// Creamos una instancia. Indicamos la clase del objeto que quiero
 			// obtener, y el id dentro de la tabla
 
 			Cliente elCliente = miSession.get(Cliente.class, 5);
