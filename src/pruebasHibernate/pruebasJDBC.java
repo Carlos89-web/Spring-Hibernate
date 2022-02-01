@@ -3,14 +3,12 @@ package pruebasHibernate;
 import java.sql.DriverManager;
 import java.sql.Connection;
 
-// --- VIDEO 47 ---
-
 public class pruebasJDBC {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// Creamos la conexión a la BD. useSSL = false es un protocolo de seguridad
+		// Creamos la conexiÃ³n a la BD. useSSL = false es un protocolo de seguridad
 		
 		String jdbcURL = "jdbc:mysql://localhost:3306/relacioneshibernate?useSSL=false";
 		String usuario ="root";
@@ -22,11 +20,11 @@ public class pruebasJDBC {
 			
 			Connection miConexion = DriverManager.getConnection(jdbcURL, usuario, clave);
 			
-			System.out.println("Conexión correcta");
+			System.out.println("ConexiÃ³n correcta");
 			
 		} catch (Exception e) {
 			
-			System.out.println("Conexión fallida");
+			System.out.println("ConexiÃ³n fallida");
 			
 		}
 		
