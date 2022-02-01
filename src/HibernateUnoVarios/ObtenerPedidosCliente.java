@@ -1,7 +1,5 @@
 package HibernateUnoVarios;
 
-// --- VIDEO 64, 65 ---
-
 import java.util.GregorianCalendar;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -37,7 +35,7 @@ public class ObtenerPedidosCliente {
 //			System.out.println("CLiente: "+ elCliente);
 //			System.out.println("Pedidos: "+ elCliente.getPedido());
 			
-			// Video 65: Usamos HQL para evitar el error fetch lazy. Paquete a importar de 
+			// Usamos HQL para evitar el error fetch lazy. Paquete a importar de 
 			// query -> org.hibernate.query.Query;
 			
 			Query<Cliente> consulta = miSession.createQuery("SELECT CL FROM Cliente CL JOIN FETCH CL.pedido WHERE CL.id=:elClienteId", Cliente.class);
