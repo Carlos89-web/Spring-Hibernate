@@ -15,8 +15,6 @@ import javax.persistence.Table;
 
 import conexionHibernate.Cliente;
 
-// --- VIDEO 60, 61 ---
-
 @Entity
 @Table(name = "pedido")
 public class Pedido {
@@ -45,8 +43,8 @@ public class Pedido {
 		this.fecha = fecha;
 	}
 	
-	// Video 61: El campo fecha no es necesario declararlo en el segundo constructor porque 
-	// est· en el primer constructor, y tampoco necesita getter ni setter
+	// El campo fecha no es necesario declararlo en el segundo constructor porque 
+	// est√° en el primer constructor, y tampoco necesita getter ni setter
 
 	public Pedido(String formaPago, Cliente clienteId) {
 		this.formaPago = formaPago;
