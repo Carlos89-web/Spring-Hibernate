@@ -1,7 +1,5 @@
 package HibernateUnoVarios;
 
-// --- VIDEO 62, 63 ---
-
 import java.util.GregorianCalendar;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
