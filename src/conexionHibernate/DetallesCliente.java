@@ -10,9 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-
-//--- VIDEO 54, 57, 59 ---
-
 @Entity
 @Table(name="detalles_cliente")
 public class DetallesCliente {
