@@ -16,8 +16,6 @@ import javax.persistence.Table;
 
 import HibernateUnoVarios.Pedido;
 
-//--- VIDEO 54 ---
-
 @Entity
 @Table(name = "cliente")
 public class Cliente {
@@ -34,16 +32,16 @@ public class Cliente {
 	private String direccion;
 
 	// Creamos una variable objeto y le hacemos el mapeo ORM (cascade=CascadeType.ALL). Le decimos
-	// tambiÈn la annotation para relacionar tablas. Gracias a CascadeType, se borran los registros
-	// de las tablas relacionadas, es decir, si borramos un registro de la tabla clientes, tambiÈn
-	// se borrar· de la tabla detalles_clientes.
+	// tambi√©n la annotation para relacionar tablas. Gracias a CascadeType, se borran los registros
+	// de las tablas relacionadas, es decir, si borramos un registro de la tabla clientes, tambi√©n
+	// se borrar√° de la tabla detalles_clientes.
 
 	@OneToOne(cascade = {CascadeType.ALL})
 	@JoinColumn(name = "id")
 	private DetallesCliente detallesCliente;
 	
-	// Video 61: Para almacenar varios pedidos, creamos un campo de tipo List y le creamos la relaciÛn
-	// @OneToMany. Mapeamos el campo que hemos creado en la tabla de pedidos, cliente es quiÈn tiene
+	// Para almacenar varios pedidos, creamos un campo de tipo List y le creamos la relaci√≥n
+	// @OneToMany. Mapeamos el campo que hemos creado en la tabla de pedidos, cliente es qui√©n tiene
 	// la annotation @ManyToOne, copiamos la cascade.
 	
 	@OneToMany(mappedBy="clienteId", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
@@ -108,14 +106,14 @@ public class Cliente {
 		return "Cliente [Id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + "]";
 	}
 	
-	// Video 61: Agregamos un campo que me permita agregar pedidos para el cliente en concreto
-	// que me haya hecho estos pedidos. Para ello creamos un mÈtodo. Este mÈtodo recibe por
-	// par·metro el pedido hecho por el cliente.
+	// Agregamos un campo que me permita agregar pedidos para el cliente en concreto
+	// que me haya hecho estos pedidos. Para ello creamos un m√©todo. Este m√©todo recibe por
+	// par√°metro el pedido hecho por el cliente.
 	
 	public void agregarPedidos (Pedido elPedido) {
 		
-		// Si "pedido", que es la propiedad lista que hemos creado, est· vacio, lo que tienes que
-		// hacer es crear ese arraylist. Esto es como decir, que si me cesta de compra est· vacia
+		// Si "pedido", que es la propiedad lista que hemos creado, est√° vacio, lo que tienes que
+		// hacer es crear ese arraylist. Esto es como decir, que si me cesta de compra est√° vacia
 		// Crea un arraylist, de tipo pedido, donde almacenar mi pedido. Con .add almacenamos el
 		// pedido, con setClienteId, creamos el cliente, al que referenciamos con this, para indicar
 		// que es la clase cliente donde nos encontramos
