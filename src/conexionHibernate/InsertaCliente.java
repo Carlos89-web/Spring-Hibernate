@@ -1,7 +1,5 @@
 package conexionHibernate;
 
-// --- VIDEO 55 ---
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -24,15 +22,15 @@ public class InsertaCliente {
 		try {
 
 			Cliente cliente1 = new Cliente("Lucia", "Prieto", "Huelva");
-			DetallesCliente detallescliente1 = new DetallesCliente("www.luciaCompany.com", "456789", "La m·s mejon");
+			DetallesCliente detallescliente1 = new DetallesCliente("www.luciaCompany.com", "456789", "La m√°s mejon");
 
-			// VIDEO 55: Asociamos los objetos
+			// Asociamos los objetos
 			
 			cliente1.setDetallesCliente(detallescliente1);
 			
 			miSession.beginTransaction();
 			
-			// Video 55: Este save guarda la informaciÛn en las dos tablas relacionadas
+			// Este save guarda la informaci√≥n en las dos tablas relacionadas
 
 			miSession.save(cliente1);
 
